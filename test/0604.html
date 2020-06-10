@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>サンプル</title>
+        <script src="../../js/jquery-3.2.1.min.js"></script>
+        <script>
+            $(function () {
+                $.ajax({
+                    url: 'sample3.xml',
+                    dateType: 'xml',
+                    success : function(data){
+                    $("item",date).each(function(){
+                        $("dl").append("<dt><a href='"+$("link",this).text()+"'>"
+                        +$("title",this).text()+"</a></dt><dd>"
+                        +$("description",this).text()+"</dd>");
+                    });
+                }
+            });
+        });
+            </script>
+            </head>
+            <body>
+            <button>変更</button>
+            <div><p>変更前のテキスト</p></div>
+        
+        </body>
+</html>
